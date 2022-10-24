@@ -12,7 +12,7 @@ FindAreaOfAPizza(17) /* second pizza "17" */
 function FindAreaOfAPizza(pizzaSize) {
     const pizzaRadius = pizzaSize / 2;
     const areaOfAPizza = Math.PI * Math.pow(pizzaRadius, 2);
-    console.log("Area of the pizza is ", areaOfAPizza, "inchs")
+    console.log(`Q1 - Area of the ${pizzaSize} inch pizza is `, areaOfAPizza, "inchs")
 }
 
 // 2. What is the cost per square inch of each pizza?
@@ -24,34 +24,44 @@ function CostPerSquareInch(pizzaSize, price) {
     const pizzaRadius = pizzaSize / 2;
     const areaOfAPizza = Math.PI * Math.pow(pizzaRadius, 2);
     const priceOfAPizzaPerSquareInch = price / areaOfAPizza;
-    console.log("Price per square inch ", priceOfAPizzaPerSquareInch)
+    console.log(`Q2 - Price of ${pizzaSize} inch pizza per square inch is `, priceOfAPizzaPerSquareInch)
 }
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
 // between 1 and 13 (assume ace is 1, jack is 11…)
 
-GetRandomCard()
+GetRandomCard("Q3")
 
-function GetRandomCard() {
+function GetRandomCard(QuestionNum) {
     const TOTAL_CARDS = 12;
     var RandomCard = Math.round(Math.random() * TOTAL_CARDS) + 1;
-    console.log(RandomCard);
-    return RandomCard
+    if(QuestionNum == "Q3") {
+        console.log("Q3 - Get random card ", RandomCard);
+    } else if (QuestionNum == "Q4-1") {
+        console.log("Q4 - First Random Card ", RandomCard);
+        return RandomCard
+    } else if (QuestionNum == "Q4-2") {
+        console.log("Q4 - Second Random Card ", RandomCard);
+        return RandomCard
+    } else if (QuestionNum == "Q4-3") {
+        console.log("Q4 - Third Random Card ", RandomCard);
+        return RandomCard
+    }
 }
 
 // 4. Draw 3 cards and use Math to determine the highest
 // card
 
-const Card1 = GetRandomCard();
-const Card2 = GetRandomCard();
-const Card3 = GetRandomCard();
+const Card1 = GetRandomCard("Q4-1");
+const Card2 = GetRandomCard("Q4-2");
+const Card3 = GetRandomCard("Q4-3");
 
 GetMaximumCard()
 
 function GetMaximumCard() {
     const Result = Math.max(Card1, Card2, Card3)
-    console.log(Result)
+    console.log("Q4 - Highest card from three cards ",  Result)
 }
 
 /**
