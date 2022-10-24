@@ -53,9 +53,9 @@ function GetRandomCard(QuestionNum) {
 // 4. Draw 3 cards and use Math to determine the highest
 // card
 
-const Card1 = GetRandomCard("Q4-1");
-const Card2 = GetRandomCard("Q4-2");
-const Card3 = GetRandomCard("Q4-3");
+const Card1 = GetRandomCard("Q4-1")
+const Card2 = GetRandomCard("Q4-2")
+const Card3 = GetRandomCard("Q4-3")
 
 GetMaximumCard()
 
